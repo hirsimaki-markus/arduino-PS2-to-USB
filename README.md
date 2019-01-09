@@ -16,4 +16,4 @@ Then connect arduinos USB to PC with any suitable cable and upload the code as a
 
 * Currently only supports Finnish keymap with 104 keys or less. If you want to help adding more keymaps feel free to email me 
 
-* pausebreak keys toggles numpad numbers to work as mouse (0 and 5 for mousebuttons)
+* Pausebreak key toggles numpad numbers to work as mouse (0 and 5 for mousebuttons)
