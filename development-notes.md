@@ -5,7 +5,7 @@ like actually building the adapter and dumpster diving for some additional parts
 
 ## Motivation and origins of the project
 
-The project began after I had found IBM Model M with finnish layout. ![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/ibm-mode-m-fin.png) As a keyboard enthusiast the need to get it working as my
+The project began after I had found IBM Model M with finnish layout. ![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/ibm-model-m-fin.png) As a keyboard enthusiast the need to get it working as my
 daily driver immediately hit me and soon after this I also realized the PS2-to-USB adapters I already owned would not be fit
 for the purpose. The reason here being that these adapters were "dumb" as they only connected wire to wire and didn't translate
 between the old and new protocols.
