@@ -19,8 +19,15 @@ Then connect arduinos USB to PC with any suitable cable and upload the code as a
 
 * Pausebreak key toggles numpad numbers to work as mouse (0 and 5 for mousebuttons)
 
+## Todo and coming up changes
+- [ ] Code cleanup and refactoring
+- [ ] Add support for capslock etc. lights
+- [ ] Add support for more keys
+- [ ] Add support for en-us keymap
+- [ ] Add easy-to-configure remapping system
+
 ## License and copyleft
-Copyleft <img src="readme-images/copyleft.png" width="12" height="12"/> Markus Hirsimäki under [GNU General Public License v3.0](https://choosealicense.com/licenses/lgpl-3.0/)
+Copyleft <img src="https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/copyleft.png" width="12" height="12"/> Markus Hirsimäki under [GNU General Public License v3.0](https://choosealicense.com/licenses/lgpl-3.0/)
 
 ## Acknowledgments
 Special thanks to [Buutti OY's](https://buutti.com/) programming club and University of Oulu's course on [electronics repurposing](https://weboodi.oulu.fi/oodi/opintjakstied.jsp?OpinKohd=53820697&haettuOpas=-1)
