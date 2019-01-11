@@ -25,6 +25,7 @@ Then connect arduinos USB to PC with any suitable cable and upload the code as a
 - [ ] Add support for more keys
 - [ ] Add support for en-us keymap
 - [ ] Add easy-to-configure remapping system
+- [ ] Convert code from scetch to library form
 
 ## License and copyleft
 Copyleft <img src="https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/copyleft.png" width="12" height="12"/> Markus Hirsimäki under [GNU General Public License v3.0](https://choosealicense.com/licenses/lgpl-3.0/)
