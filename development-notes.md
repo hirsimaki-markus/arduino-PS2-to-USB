@@ -41,7 +41,18 @@ one of the hardest problems during the whole project.
 
 ## On dificulties and things learned
 
+The project as a whole has had various dificulties, most of them being related to software. On the hardware side the only notable
+dificulty was the physical assembly of wires and leads as I had limited amount of materials at hand. The actual PS2 adapter head was
+made from previously mentioned "dumb" adapter that had rather shobby wire quality which resulted in soldered wires snapping in half
+multiple times.
 
+Software side the single most frustrating problem was Arduino Pro Micro in itself as it is notoriously dificult to program. Pro Micro
+lacks any sort of physical reset button so only way to even attempt to reset it is to short RST and GND pins. This reset doesn't always
+work and after getting the board programmed with wrong settings and faulty scetch at one point only solution was to reinstall
+all Windows drivers for Arduino along with all related software and immediately reset the board twice after connecting it to pc and then
+upload empty scetch.
+
+The most complex single item that had to be created was the actual parsing of PS2
 
 ## jatkokehitys
 
