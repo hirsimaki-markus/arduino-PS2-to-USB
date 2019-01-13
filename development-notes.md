@@ -86,4 +86,4 @@ level and robust software implementation to make the mouse actually move in ways
 proves out to be too hard to interface with, a trackball based system will be valid replacement. Later on adding bluetooth should not
 be too hard to implement as routing USB data over bluetooth is wll known technology.
 
-
+_- Markus Hirsimäki_
