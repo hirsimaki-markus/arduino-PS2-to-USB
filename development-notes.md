@@ -1,6 +1,6 @@
 # Development notes
 
-First of all please note these notes describe my process of getting the whole project working including the physical side of things
+First I would like to mention these notes describe my process of getting the whole project working including the physical side of things
 like actually building the adapter and dumpster diving for some additional parts. For more patch note -like information see README.
 
 ## Motivation and origins of the project
@@ -19,14 +19,14 @@ nearly impossible as all libraries meant to parse PS2 protocol produced some mys
 
 ## Tools used and different iterations
 
-The library is built with Arduino IDE excluding some table bases that were generated with Python to create needed translation tables
+The library is built with Arduino IDE excluding some table bases that were generated with Python to create needed lookup tables
 for PS2 scancodes and USB scancodes. The very first version of this project was naive polling based test that, after manual parsing,
 proved Pro Micro indeed can function fast enough to catch all needed data from the keyboard.
 
 It soon became obvious that the only sensible way to perform the data capture from keyboard was to use interrupts instead of polling.
 After I had finally managed to get the interrupt based system to work, similarities between my solution's and other libraries' source
 code were striking even thought everything was cleanroom designed to suit my needs.
-onto
+
 At this point I also had constructed various versions of the actual cables used and would later settle to use the setup shown here.
 ![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/ps2-to-pin.png)
 Even thought the PS2 cable actually has more than 4 wires only 4 are used for the protocol; v+, ground, data and clock.
@@ -48,9 +48,9 @@ multiple times.
 Software side the single most frustrating problem was Arduino Pro Micro in itself as it is notoriously difficult to program. Pro Micro
 lacks any sort of physical reset button so only way to even attempt to reset it is to short RST and GND pins. This reset doesn't always
 work and after getting the board programmed with wrong settings and faulty sketch at one point, the only solution was to reinstall
-all Windows drivers for Arduino along with all related software. Then immediately reset the board twice after connecting it to PC and
-upload empty sketch. Debugging in general was also tedious as there are no easy to use debuggers all debugging had to be done with
-"print to console" method.
+all Windows drivers for Arduino along with all related software. Then after this immediately reset the board twice after connecting it
+to PC and upload empty sketch. Debugging in general was also tedious as there are no easy to use debuggers all debugging had to be done
+with "print to console" method.
 
 The most complex single item that had to be created was the actual parsing of PS2 bytes into keystrokes after raw data had been parsed
 into bytes. This is the result of scancode set 2 presenting some invidual keystrokes as 8 separate bytes. After the multiple byte
@@ -80,7 +80,7 @@ added will be the pointing stick and rotatory encoder to better support mouse si
 cabability so the keyboard can be used as an actual keyboard and mouse combo. Adding the Bluetooth will require the adding of battery
 which in turn will be able to support RGB backlighting.
 
-I'm expecting for the addition of pointing stick to be the hardest upcoming task as it requires large amounts of tinkering of hardware
+I'm expecting for the addition of pointing stick to be the hardest upcoming task as it requires large amounts of tinkering on hardware
 level and robust software implementation to make the mouse actually move in ways that are pleasant for the user. If the pointing stick
 proves out to be too hard to interface with, a trackball based system will be valid replacement. Later on adding Bluetooth should not
 be too hard to implement as routing USB data over Bluetooth is well known technology.
