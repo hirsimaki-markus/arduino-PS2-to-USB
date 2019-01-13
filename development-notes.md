@@ -70,14 +70,20 @@ vary by keyboard layout chosen by OS an this allows some keyboards to include um
 This project has allowed me to learn multitude of things. Maybe the most important of these is how interrupt based systems work in
 practice with keyboard layout maps coming close second. The project has also been valuable practice in writing (Arduino variant) of C++.
 On the physical side of developing embedded systems collecting various parts for future development has also been interesting task.
-In the image rotatory encoder and laptop pointing stick can be seen that ave been salvaged from old laptop and keyboard
+In the image rotatory encoder and laptop pointing stick can be seen that have been salvaged from keyboard and old laptop.
 ![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/additional-parts.png)
 
 
-
-mitä opin? protokollan toimintaa ja scancode siujen merkitystä yms ainakin
-
 ## Future of the project
 
-Current state of the project
-![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/adapter-assembled.png)
+In it's current state the project is more like a working prototype than a finished product. For future development the next things to be
+added will be the pointing stick and rotatory encoder to better support mouse simulation. This is in preparation of adding bluetooth
+cabability so the keyboard can be used as an actual keyboard and mouse combo. Adding the bluetooth will require the adding of battery
+which in turn will be able to support RGB backlighting.
+
+I'm expecting for the addition of pointing stick to be the hardest upcoming task as it requires large amounts of tinkering of hardware
+level and robust software implementation to make the mouse actually move in ways that are pleasant for the user. If the pointing stick
+proves out to be too hard to interface with, a trackball based system will be valid replacement. Later on adding bluetooth should not
+be too hard to implement as routing USB data over bluetooth is wll known technology.
+
+
