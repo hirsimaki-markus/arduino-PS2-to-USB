@@ -39,7 +39,7 @@ Later on another tool used was USB protocol sniffer which revealed incorrect doc
 one of the hardest problems during the whole project.
 
 
-## On dificulties and things learned
+## On dificulties
 
 The project as a whole has had various dificulties, most of them being related to software. On the hardware side the only notable
 dificulty was the physical assembly of wires and leads as I had limited amount of materials at hand. The actual PS2 adapter head was
@@ -50,29 +50,34 @@ Software side the single most frustrating problem was Arduino Pro Micro in itsel
 lacks any sort of physical reset button so only way to even attempt to reset it is to short RST and GND pins. This reset doesn't always
 work and after getting the board programmed with wrong settings and faulty scetch at one point only solution was to reinstall
 all Windows drivers for Arduino along with all related software and immediately reset the board twice after connecting it to pc and then
-upload empty scetch.
+upload empty scetch. Debugging in general was also tedious as there are no easy to use debuggers all debugging had to be done with
+"print to console" method.
 
-The most complex single item that had to be created was the actual parsing of PS2
+The most complex single item that had to be created was the actual parsing of PS2 bytes into keystrokes after raw data had been parsed
+into bytes. This is the result of scancode set 2 presenting some invidual keystrokes as 8 separate bytes. After the multiple byte
+scancodes have been translated into sets consisting of single bytes they are used as keys to lookup table which will return
+corresponding values for USB protocol.
 
-## jatkokehitys
+The next significant problem was actually building the lookup table. Getting list of PS2 scancodes was exercise in clickng keys, but
+building the list of USB scancodes was all but trivial. In the end it included a small code snippet that scanned throught all possible
+values that could be sent to the receiving PC over keyboard library. Arduino documentation does not list all important scancodes,
+for example one for printscreen button is completely missing even thought the value for it does exist. Some of these values
+vary by keyboard layout chosen by OS an this allows some keyboards to include umlauts instead of some other keys.
 
 
-(kuvia sinne tönne)
+## On things learned
 
-dyykkaus
+This project has allowed me to learn multitude of things. Maybe the most important of these is how interrupt based systems work in
+practice with keyboard layout maps coming close second. The project has also been valuable practice in writing (Arduino variant) of C++.
+On the physical side of developing embedded systems collecting various parts for future development has also been interesting task.
+In the image rotatory encoder and laptop pointing stick can be seen that ave been salvaged from old laptop and keyboard
+![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/additional-parts.png)
 
-kirjastojen toimimattomuus(samankaltainen lopputulos). vaihtoehtoinen toteutus
 
-adapterin teko ja uudelleenteko
 
-naiivi systeemi ilman keskeytyksiä, raakadataa käsin
+mitä opin? protokollan toimintaa ja scancode siujen merkitystä yms ainakin
 
-keskeytysohjaus
+## Future of the project
 
-skoopilla scancode sivu
-
-ps2 ja usb koodien mäppäys
-
-usb haistelua kirjaston toiminnasta. vajaa/virheellinen dokumentaatio
-
-jatkokehitys ja lisäosien dyykkays
+Current state of the project
+![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/adapter-assembled.png)
