@@ -20,7 +20,7 @@ Then connect arduinos USB to PC with any suitable cable and upload the code as a
 
 * Pausebreak key toggles numpad numbers to work as mouse (0 and 5 for mousebuttons)
 
-## Todo and coming up changes
+## Todo and upcoming changes
 - [ ] Code cleanup and refactoring
 - [ ] Add support for capslock etc. lights
 - [ ] Add support for more keys
