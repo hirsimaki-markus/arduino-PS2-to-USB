@@ -33,4 +33,4 @@ Then connect arduinos USB to PC with any suitable cable and upload the code as a
 Copyleft <img src="https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/copyleft.png" width="12" height="12"/> Markus Hirsimäki under [GNU General Public License v3.0](https://choosealicense.com/licenses/lgpl-3.0/)
 
 ## Acknowledgments
-Special thanks to [Buutti OY's](https://buutti.com/) programming club and University of Oulu's course on [electronics repurposing](https://weboodi.oulu.fi/oodi/opintjakstied.jsp?OpinKohd=53820697&haettuOpas=-1)
+Special thanks to [Buutti OY's](https://buutti.com/) programming club and University of Oulu's course on [electronics repurposing](https://weboodi.oulu.fi/oodi/opintjakstied.jsp?OpinKohd=53820697&haettuOpas=-1&Kieli=6)
