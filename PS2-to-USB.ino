@@ -1102,9 +1102,6 @@ void keyboardRead(void) {
     | P parity  parity bit
     | E end     stop bit
     */
-   
-    //Serial.print("ISR: ");// DEBUG
-    //DEBUG_HEXPRINT((dataIn >> 1) & 0xff);// DEBUG
 
     if ((dataIn & 0x401) != 0x400) {   // check with bitmask if either start or stop fails and set error flag
       errorFlag = true;
