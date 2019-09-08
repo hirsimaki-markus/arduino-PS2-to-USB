@@ -1,6 +1,7 @@
 # Arduino PS2-to-USB
 This project allows you to use Arduino as USB adapter for PS2 keyboards like IBM model M
 ![](https://raw.githubusercontent.com/hirsimaki-markus/arduino-PS2-to-USB/master/images/adapter-assembled.png)
+![](https://upload.wikimedia.org/wikipedia/commons/4/48/IBM_Model_M.png)
 
 ## Installation and usage
 To use Arduino as adapter you should first connect PS/2 keyboard cables wires to arduino
